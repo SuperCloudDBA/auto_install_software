@@ -42,7 +42,7 @@
 
 | 软件         | 版本   | 软件包                                       | 官网                                                         |
 | ------------ | ------ | -------------------------------------------- | ------------------------------------------------------------ |
-| `MySQL`      | 5.6    | `mysql-5.6.45-linux-glibc2.12-x86_64.tar.gz` | [MySQL](https://dev.mysql.com/downloads/mysql/5.6.html#downloads) |
+| `MySQL`      | 5.6    | `mysql-5.6.49-linux-glibc2.12-x86_64.tar.gz` | [MySQL](https://dev.mysql.com/downloads/mysql/5.6.html#downloads) |
 | `KeepAlived` | 2.0.18 | `keepalived-2.0.18.tar.gz`                   | [Keepalived](https://www.keepalived.org/doc/installing_keepalived.html) |
 
 ## 自动安装配置脚本

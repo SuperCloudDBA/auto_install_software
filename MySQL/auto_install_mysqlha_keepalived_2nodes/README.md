@@ -29,7 +29,7 @@
 ```bash
 git clone https://github.com/SuperCloudDBA/auto_install_software.git
 cd MySQL/software
-wget https://downloads.mysql.com/archives/get/p/23/file/mysql-5.6.48-linux-glibc2.12-i686.tar.gz
+wget https://downloads.mysql.com/archives/get/p/23/file/mysql-5.6.49-linux-glibc2.12-x86_64.tar.gz
 ```
 
 ## 第一步先安装从库

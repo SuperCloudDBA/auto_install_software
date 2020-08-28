@@ -9,8 +9,8 @@ mkdir -p /alidata/mysql/data
 mkdir -p /alidata/mysql/tmp
 
 cd /alidata/install
-tar -xzvf mysql-5.6.45-linux-glibc2.12-x86_64.tar.gz
-mv mysql-5.6.45-linux-glibc2.12-x86_64/* /alidata/mysql
+tar -xzvf mysql-5.6.49-linux-glibc2.12-x86_64.tar.gz
+mv mysql-5.6.49-linux-glibc2.12-x86_64/* /alidata/mysql
 
 
 #install mysql
