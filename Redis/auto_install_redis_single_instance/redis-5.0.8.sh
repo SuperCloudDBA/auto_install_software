@@ -1,7 +1,14 @@
 #!/bin/bash
-# Usage： bash redis-3.2.11.sh
+# Usage： bash redis-5.0.8.sh
+# 安装前需要升级你第一步安装的gcc 至版本9
 
-SRC_URI="http://zy-res.oss-cn-hangzhou.aliyuncs.com/redis/redis-3.2.11.tar.gz"
+#yum install centos-release-scl -y
+#yum install devtoolset-9-gcc* -y
+#scl enable devtoolset-9 bash
+source /opt/rh/devtoolset-9/enable
+
+
+SRC_URI="https://download.redis.io/releases/redis-5.0.8.tar.gz"
 PKG_NAME=`basename $SRC_URI`
 DIR=`pwd`
 DATE=`date +%Y%m%d%H%M%S`
@@ -10,6 +17,8 @@ CPU_NUM=$(cat /proc/cpuinfo | grep processor | wc -l)
 
 \mv /alidata/redis /alidata/redis.bak.$DATE
 
+yum install gcc-c++ -y
+yum install -y jemalloc*
 
 mkdir -p /alidata/redis
 cd /alidata/redis
@@ -22,18 +31,19 @@ if [ ! -s $PKG_NAME ]; then
     wget -c $SRC_URI
 fi
 
-rm -rf redis-3.2.11
+rm -rf redis-5.0.8
 tar xvf $PKG_NAME
-cd redis-3.2.11
+cd redis-5.0.8
 
 if [ $CPU_NUM -gt 1 ];then
     make -j$CPU_NUM
 else
     make
 fi
+
 make install
 
-\cp /alidata/install/redis-3.2.11/* /alidata/redis/ -rp
+\cp /alidata/install/redis-5.0.8/* /alidata/redis/ -rp
 
 cd /alidata/redis
 
