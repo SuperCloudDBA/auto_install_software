@@ -2,9 +2,9 @@
 # Usage： bash redis-6.0.8.sh
 # 安装前需要升级你第一步安装的gcc 至版本9
 
-yum install centos-release-scl -y
-yum install devtoolset-9-gcc* -y
-scl enable devtoolset-9 bash
+#yum install centos-release-scl -y
+#yum install devtoolset-9-gcc* -y
+#scl enable devtoolset-9 bash
 source /opt/rh/devtoolset-9/enable
 
 
@@ -15,6 +15,7 @@ DATE=`date +%Y%m%d%H%M%S`
 CPU_NUM=$(cat /proc/cpuinfo | grep processor | wc -l)
 
 yum install gcc-c++ -y
+yum install -y jemalloc*
 
 \mv /alidata/redis /alidata/redis.bak.$DATE
 
@@ -40,6 +41,7 @@ else
     make
 fi
 
+make install
 
 \cp /alidata/install/redis-6.0.8/* /alidata/redis/ -rp
 
