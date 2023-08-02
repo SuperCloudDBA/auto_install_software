@@ -14,11 +14,11 @@ mkdir -p /usr/local/mysql/bin
 
 cd /alidata/install
 
-if [ ! -f mysql-8.0.16-linux-glibc2.12-x86_64.tar.xz ];then
+if [ ! -f mysql-8.0.21-linux-glibc2.12-x86_64.tar.xz ];then
   wget https://dev.mysql.com/get/Downloads/MySQL-8.0/mysql-8.0.21-linux-glibc2.12-x86_64.tar.xz
 fi
-tar -xf mysql-8.0.16-linux-glibc2.12-x86_64.tar.xz
-mv mysql-8.0.16-linux-glibc2.12-x86_64/* /alidata/mysql
+tar -xf mysql-8.0.21-linux-glibc2.12-x86_64.tar.xz
+mv mysql-8.0.21-linux-glibc2.12-x86_64/* /alidata/mysql
 
 #install mysql
 groupadd mysql
